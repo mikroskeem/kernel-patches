@@ -18,7 +18,7 @@ diff -r -u linux-5.4.72/net/bridge/br_private.h linux-5.4.72-modified/net/bridge
  {
  }
  #endif
-+bool br_state_logging;
++extern bool br_state_logging;
 
  /* br_fdb.c */
  int br_fdb_init(void);
