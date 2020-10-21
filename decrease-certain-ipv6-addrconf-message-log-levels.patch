@@ -1,0 +1,12 @@
+diff -r -u linux-5.4.72/net/ipv6/addrconf.c linux-5.4.72-modified/net/ipv6/addrconf.c
+--- linux-5.4.72/net/ipv6/addrconf.c	2020-10-17 11:11:24.000000000 +0300
++++ linux-5.4.72-modified/net/ipv6/addrconf.c	2020-10-21 19:29:11.942433605 +0300
+@@ -3580,7 +3580,7 @@
+ 				idev->if_flags |= IF_READY;
+ 			}
+ 
+-			pr_info("ADDRCONF(NETDEV_CHANGE): %s: link becomes ready\n",
++			pr_debug("ADDRCONF(NETDEV_CHANGE): %s: link becomes ready\n",
+ 				dev->name);
+ 
+ 			run_pending = 1;
