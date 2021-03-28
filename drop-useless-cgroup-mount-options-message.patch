@@ -1,0 +1,12 @@
+diff -u -r linux-5.4.105/kernel/cgroup/cgroup-v1.c linux-5.4.105-modified/kernel/cgroup/cgroup-v1.c
+--- linux-5.4.105/kernel/cgroup/cgroup-v1.c	2021-03-11 15:06:51.000000000 +0200
++++ linux-5.4.105-modified/kernel/cgroup/cgroup-v1.c	2021-03-28 15:39:07.608523715 +0300
+@@ -1170,7 +1170,7 @@
+ 		}
+ 
+ 		if (root->flags ^ ctx->flags)
+-			pr_warn("new mount options do not match the existing superblock, will be ignored\n");
++			pr_debug("new mount options do not match the existing superblock, will be ignored\n");
+ 
+ 		ctx->root = root;
+ 		return 0;
