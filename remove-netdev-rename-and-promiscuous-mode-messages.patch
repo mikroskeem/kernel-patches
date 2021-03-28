@@ -1,6 +1,6 @@
-diff -r -u linux-5.4.72/net/core/dev.c linux-5.4.72-modified/net/core/dev.c
---- linux-5.4.72/net/core/dev.c	2020-10-17 11:11:24.000000000 +0300
-+++ linux-5.4.72-modified/net/core/dev.c	2020-10-21 19:46:30.227943309 +0300
+diff -u -r linux-5.4.105/net/core/dev.c linux-5.4.105-modified/net/core/dev.c
+--- linux-5.4.105/net/core/dev.c	2021-03-11 15:06:51.000000000 +0200
++++ linux-5.4.105-modified/net/core/dev.c	2021-03-28 15:38:00.279443034 +0300
 @@ -1126,9 +1126,6 @@
  		return err;
  	}
@@ -11,7 +11,7 @@ diff -r -u linux-5.4.72/net/core/dev.c linux-5.4.72-modified/net/core/dev.c
  	old_assign_type = dev->name_assign_type;
  	dev->name_assign_type = NET_NAME_RENAMED;
  
-@@ -7667,9 +7664,6 @@
+@@ -7668,9 +7665,6 @@
  		}
  	}
  	if (dev->flags != old_flags) {

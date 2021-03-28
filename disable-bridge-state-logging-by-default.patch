@@ -1,7 +1,7 @@
-diff -r -u linux-5.4.72/net/bridge/br.c linux-5.4.72-modified/net/bridge/br.c
---- linux-5.4.72/net/bridge/br.c	2020-10-17 11:11:24.000000000 +0300
-+++ linux-5.4.72-modified/net/bridge/br.c	2020-10-21 19:23:08.641743863 +0300
-@@ -391,6 +391,9 @@
+diff -u -r linux-5.4.105/net/bridge/br.c linux-5.4.105-modified/net/bridge/br.c
+--- linux-5.4.105/net/bridge/br.c	2021-03-11 15:06:51.000000000 +0200
++++ linux-5.4.105-modified/net/bridge/br.c	2021-03-28 15:37:55.772437633 +0300
+@@ -394,6 +394,9 @@
  	br_fdb_fini();
  }
  
@@ -11,9 +11,9 @@ diff -r -u linux-5.4.72/net/bridge/br.c linux-5.4.72-modified/net/bridge/br.c
  module_init(br_init)
  module_exit(br_deinit)
  MODULE_LICENSE("GPL");
-diff -r -u linux-5.4.72/net/bridge/br_private.h linux-5.4.72-modified/net/bridge/br_private.h
---- linux-5.4.72/net/bridge/br_private.h	2020-10-17 11:11:24.000000000 +0300
-+++ linux-5.4.72-modified/net/bridge/br_private.h	2020-10-21 19:23:08.641743863 +0300
+diff -u -r linux-5.4.105/net/bridge/br_private.h linux-5.4.105-modified/net/bridge/br_private.h
+--- linux-5.4.105/net/bridge/br_private.h	2021-03-11 15:06:51.000000000 +0200
++++ linux-5.4.105-modified/net/bridge/br_private.h	2021-03-28 15:37:55.773437634 +0300
 @@ -542,6 +542,7 @@
  {
  }
@@ -22,9 +22,9 @@ diff -r -u linux-5.4.72/net/bridge/br_private.h linux-5.4.72-modified/net/bridge
  
  /* br_fdb.c */
  int br_fdb_init(void);
-diff -r -u linux-5.4.72/net/bridge/br_stp.c linux-5.4.72-modified/net/bridge/br_stp.c
---- linux-5.4.72/net/bridge/br_stp.c	2020-10-17 11:11:24.000000000 +0300
-+++ linux-5.4.72-modified/net/bridge/br_stp.c	2020-10-21 19:24:26.474035091 +0300
+diff -u -r linux-5.4.105/net/bridge/br_stp.c linux-5.4.105-modified/net/bridge/br_stp.c
+--- linux-5.4.105/net/bridge/br_stp.c	2021-03-11 15:06:51.000000000 +0200
++++ linux-5.4.105-modified/net/bridge/br_stp.c	2021-03-28 15:37:55.773437634 +0300
 @@ -41,7 +41,7 @@
  	if (err && err != -EOPNOTSUPP)
  		br_warn(p->br, "error setting offload STP state on port %u(%s)\n",
